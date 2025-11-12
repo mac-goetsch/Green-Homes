@@ -196,14 +196,16 @@
         }
 
         /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
-            color: var(--white);
-            padding: 8rem 0 6rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+.hero {
+    background: linear-gradient(135deg, rgba(45, 90, 39, 0.85) 0%, rgba(74, 124, 89, 0.4) 100%), 
+                url('./images/hero-background.jpeg') center 33%/cover no-repeat;
+    color: var(--white);
+    padding: 8rem 0 6rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+        
 
         .hero::before {
             content: '';
@@ -312,7 +314,7 @@
         /* Features Grid */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(4,1fr);
             gap: 2.5rem;
             margin-top: 4rem;
         }
@@ -833,7 +835,7 @@
             resize: vertical;
         }
 
-        .submit-btn {
+        .submit-button {
             background: linear-gradient(135deg, var(--primary-green), var(--light-green));
             color: var(--white);
             border: none;
@@ -846,9 +848,15 @@
             box-shadow: 0 4px 15px rgba(45, 90, 39, 0.3);
         }
 
-        .submit-btn:hover {
+        .submit-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(45, 90, 39, 0.4);
+        }
+
+        .submit-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
         }
 
         /* Footer */
@@ -1098,7 +1106,7 @@
 
                     <div class="slide-in-left" style="margin-bottom: 3rem;">
                         <h3 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 1.5rem;">Leadership</h3>
-                        <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">Led by Chris Goetsch, our team brings together over 35 years of combined experience in sustainable construction practices. Chris's commitment to continuous learning and certification in the latest green building techniques ensures that every Green Homes project incorporates the most advanced energy efficiency strategies available.</p>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">Led by Chris Goetsch, our team brings together decades of combined experience in sustainable construction practices. Chris's commitment to continuous learning and certification in the latest green building techniques ensures that every Green Homes project incorporates the most advanced energy efficiency strategies available.</p>
                     </div>
 
                     <div class="slide-in-left" style="margin-bottom: 3rem;">
@@ -1108,7 +1116,7 @@
 
                     <div class="slide-in-left">
                         <h3 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 1.5rem;">Experience You Can Trust</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.7;">With projects throughout Connecticut since 2004 and a team with 35+ years of cumulative experience, we have the knowledge and expertise to handle any energy efficient construction project, from simple additions to complete net-zero new construction.</p>
+                        <p style="font-size: 1.1rem; line-height: 1.7;">With projects throughout Connecticut since 2004 and a team with decades of cumulative experience, we have the knowledge and expertise to handle any energy efficient construction project, from simple additions to complete net-zero new construction.</p>
                     </div>
                 </div>
             </div>
@@ -1397,14 +1405,15 @@
 
                     <div class="contact-form fade-in">
                         <h3>Send Us a Message</h3>
-                        <form action="https://formspree.io/f/your-form-id" method="POST" id="contactForm">
-                            <input type="hidden" name="_to" value="info@greenhomesct.com">
-                            <input type="hidden" name="_subject" value="New inquiry from Green Homes website">
-                            <input type="hidden" name="_next" value="#contact">
+                        <form id="contactForm" method="POST">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
                             
                             <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
                             </div>
                             
                             <div class="form-group">
@@ -1418,8 +1427,8 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="project-type">Project Type</label>
-                                <select id="project-type" name="project-type">
+                                <label for="projectType">Project Type *</label>
+                                <select id="projectType" name="projectType" required>
                                     <option value="">Select a project type</option>
                                     <option value="new-construction">New Construction</option>
                                     <option value="addition">Addition</option>
@@ -1430,16 +1439,29 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="message">Project Details *</label>
-                                <textarea id="message" name="message" placeholder="Please describe your project, timeline, and any specific energy efficiency goals..." required></textarea>
+                                <label for="location">Project Location</label>
+                                <input type="text" id="location" name="location" placeholder="City, State">
                             </div>
                             
-                            <button type="submit" class="submit-btn">Send Message</button>
+                            <div class="form-group">
+                                <label for="timeline">Desired Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="immediate">Immediate (within 1 month)</option>
+                                    <option value="short-term">Short-term (1-3 months)</option>
+                                    <option value="medium-term">Medium-term (3-6 months)</option>
+                                    <option value="long-term">Long-term (6+ months)</option>
+                                    <option value="planning">Planning phase</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Project Details</label>
+                                <textarea id="message" name="message" placeholder="Please describe your project, goals, and any specific energy efficiency requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-button">Send Message</button>
                         </form>
-                        
-                        <div style="margin-top: 2rem; font-size: 0.95rem; color: var(--light-text); line-height: 1.6;">
-                            <p><strong>Note:</strong> To activate the contact form, you'll need to set up a free account with <a href="https://formspree.io" target="_blank" style="color: var(--primary-green); text-decoration: none;">Formspree</a> and replace "your-form-id" in the form action with your actual form ID.</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1632,36 +1654,59 @@
             });
         }
 
-        // Contact form functionality
+        // Contact form functionality - Vercel optimized
         function setupContactForm() {
             const contactForm = document.getElementById('contactForm');
             
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = new FormData(this);
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const message = formData.get('message');
-                
-                // Basic validation
-                if (!name || !email || !message) {
-                    showNotification('Please fill in all required fields.', 'error');
-                    return;
-                }
-                
-                if (!isValidEmail(email)) {
-                    showNotification('Please enter a valid email address.', 'error');
-                    return;
-                }
-                
-                // Simulate form submission (replace with actual form service)
-                showNotification('Thank you for your message! We will get back to you soon.', 'success');
-                
-                // Reset form
-                this.reset();
-            });
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Validation
+                    if (!data.firstName || !data.lastName || !data.email || !data.projectType) {
+                        showNotification('Please fill in all required fields.', 'error');
+                        return;
+                    }
+                    
+                    if (!isValidEmail(data.email)) {
+                        showNotification('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    // Button state management
+                    const button = document.querySelector('.submit-button');
+                    const originalText = button.textContent;
+                    button.textContent = 'Sending...';
+                    button.disabled = true;
+                    
+                    try {
+                        const response = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (response.ok) {
+                            showNotification(result.message || 'Thank you for your message! We will get back to you soon.', 'success');
+                            this.reset();
+                        } else {
+                            showNotification('Error: ' + (result.message || 'Failed to send message'), 'error');
+                        }
+                    } catch (error) {
+                        showNotification('Network error. Please try again or call us directly.', 'error');
+                        console.error('Form submission error:', error);
+                    }
+                    
+                    // Restore button
+                    button.textContent = originalText;
+                    button.disabled = false;
+                });
+            }
         }
 
         // Utility functions
