@@ -488,16 +488,17 @@
             overflow: hidden;
         }
 
-        .project-image::before {
-            content: '📸';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-            opacity: 0.3;
-            color: var(--primary-green);
-        }
+
+.project-image:not(:has(img))::before {
+    content: '📸';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.3;
+    color: var(--primary-green);
+}
 
         .project-image img {
             width: 100%;
@@ -1034,7 +1035,7 @@
                     <p>We specialize in creating homes that use 80% less energy than traditional construction while providing superior comfort and air quality.</p>
                 </div>
 
-                <div class="features-grid">
+                <div class="features-grid-three">
                     <div class="feature-card fade-in">
                         <div class="feature-icon">🏠</div>
                         <h3>Net-Zero Energy Homes</h3>
@@ -1291,10 +1292,17 @@
                         <h4>Project 2</h4>
                         <p>Ready for your project photo and description</p>
                     </div>
-                    <div class="project-placeholder">
-                        <h4>Project 3</h4>
-                        <p>Ready for your project photo and description</p>
-                    </div>
+                    <div class="project-card" onclick="openProjectModal('project3')">
+    <div class="project-image">
+        <img src="images/project3-main.jpeg" alt="The Tea House main image">
+    </div>
+    <div class="click-hint">Click to view details</div>
+    <div class="project-content">
+        <h4 class="project-title">The Tea House</h4>
+        <p class="project-blurb">An elegant Tea House designed to create a meditative landscape experience.</p>
+        <span class="project-type">New Construction</span>
+    </div>
+</div>
                     <div class="project-placeholder">
                         <h4>Project 4</h4>
                         <p>Ready for your project photo and description</p>
@@ -1841,7 +1849,22 @@
                     conventional construction. Features include triple-glazed windows, continuous insulation, 
                     heat recovery ventilation, and a solar array that produces more energy than the home consumes 
                     annually. The owners enjoy exceptional comfort year-round with minimal utility costs.`
-                }
+                },
+                'project3': {
+    title: 'The Tea House',
+    images: [
+        'images/project3-main.jpeg',
+        'images/project3-photo2.jpeg',
+        'images/project3-photo3.jpeg',
+        'images/project3-photo4.jpeg'
+    ],
+    details: {
+        'Project Type': 'New Construction',
+        'Location': 'Stony Creek, Branford, CT',
+        'Recognition': 'Featured on the cover of Connecticut Cottages & Gardens'
+    },
+    description: `An elegant Tea House designed to create a meditative landscape experience. This thoughtfully crafted structure blends traditional aesthetics with modern construction techniques to provide a serene retreat space. Featured on the cover of Connecticut Cottages & Gardens, this project exemplifies our commitment to creating beautiful, purpose-driven spaces.`
+}
                 // Add more projects here following the same structure
             };
             
