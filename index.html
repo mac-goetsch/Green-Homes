@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Homes - Premier Net-Zero & Energy Efficient Construction</title>
+    <meta name="description" content="Connecticut's premier construction company specializing in net-zero and energy efficient homes. Passive House certified builders serving Guilford and surrounding areas since 2004.">
+    <meta name="keywords" content="passive house, net zero homes, energy efficient construction, Connecticut builders, green building, sustainable construction, ENERGY STAR">
+    <meta name="author" content="Green Homes">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Green Homes CT - Premier Net-Zero & Energy Efficient Construction">
+    <meta property="og:description" content="Connecticut's premier construction company specializing in net-zero and energy efficient homes. Passive House certified builders.">
+    <meta property="og:url" content="https://greenhomesct.com">
+    <meta property="og:site_name" content="Green Homes CT">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Green Homes CT - Premier Net-Zero Construction">
+    <meta name="twitter:description" content="Connecticut's premier construction company specializing in net-zero and energy efficient homes.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Green Homes",
+        "description": "Premier net-zero and energy efficient construction company in Connecticut",
+        "url": "https://greenhomesct.com",
+        "telephone": "+1-203-889-7875",
+        "email": "info@greenhomesct.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "61 Broad St. Ext.",
+            "addressLocality": "Guilford",
+            "addressRegion": "CT",
+            "postalCode": "06437",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "41.2879",
+            "longitude": "-72.6820"
+        },
+        "foundingDate": "2004",
+        "serviceArea": {
+            "@type": "State",
+            "name": "Connecticut"
+        },
+        "specialties": ["Passive House Construction", "Net-Zero Energy Homes", "Energy Efficient Renovations"],
+        "certifications": ["Passive House Certified", "EPA ENERGY STAR Partner"]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2d5a27;
+            --light-green: #4a7c59;
+            --accent-green: #7fb069;
+            --cream: #faf6f0;
+            --dark-text: #2c2c2c;
+            --light-text: #666;
+            --white: #ffffff;
+            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-medium: 0 5px 20px rgba(0,0,0,0.1);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* Performance optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+            loading: lazy;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition-smooth);
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .logo:hover {
+            color: var(--accent-green);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: var(--accent-green);
+            transition: var(--transition-smooth);
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-green);
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(45, 90, 39, 0.85) 0%, rgba(74, 124, 89, 0.4) 100%), 
+                url('./images/hero-background.jpeg') center 33%/cover no-repeat;
+    color: var(--white);
+    padding: 8rem 0 6rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+        
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-green);
+            color: var(--white);
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition-smooth);
+            animation: fadeInUp 1s ease-out 0.4s both;
+            box-shadow: 0 4px 15px rgba(127, 176, 105, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--light-green);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(127, 176, 105, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Sections */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
+            text-align: center;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(127, 176, 105, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-green), var(--light-green));
+            transform: scaleX(0);
+            transition: var(--transition-smooth);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-green), var(--light-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(127, 176, 105, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+        }
+
+        .feature-card p {
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Expandable Content */
+        .expandable {
+            margin-top: 2rem;
+        }
+
+        .expand-trigger {
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            box-shadow: 0 2px 10px rgba(45, 90, 39, 0.2);
+        }
+
+        .expand-trigger:hover {
+            background: var(--light-green);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(45, 90, 39, 0.3);
+        }
+
+        .expand-content {
+            max-height: 0;
+            overflow: hidden;
+            margin-top: 1rem;
+            padding: 0 1.5rem;
+            background: var(--cream);
+            border-radius: 10px;
+            transition: all 0.4s ease-out;
+            opacity: 0;
+        }
+
+        .expand-content.active {
+            max-height: 500px;
+            padding: 1.5rem;
+            opacity: 1;
+        }
+
+        /* Certifications */
+        .certifications {
+            background: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cert-badges {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .cert-badge {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--accent-green);
+            transition: var(--transition-smooth);
+            min-width: 200px;
+        }
+
+        .cert-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--primary-green);
+        }
+
+        .cert-badge h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        /* Gallery Preview */
+        .gallery-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: var(--cream);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+.project-image:not(:has(img))::before {
+    content: '📸';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.3;
+    color: var(--primary-green);
+}
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-title {
+            color: var(--primary-green);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-blurb {
+            color: var(--light-text);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-type {
+            display: inline-block;
+            background: var(--accent-green);
+            color: var(--white);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .click-hint {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(45, 90, 39, 0.9);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .project-card:hover .click-hint {
+            opacity: 1;
+        }
+
+        /* Project Modal */
+        .project-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            display: none;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .project-modal.active {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 20px;
+            max-width: 1000px;
+            width: 100%;
+            margin: 2rem 0;
+            position: relative;
+            animation: slideInUp 0.3s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 10001;
+            transition: var(--transition-smooth);
+        }
+
+        .modal-close:hover {
+            background: var(--accent-green);
+            transform: scale(1.1);
+        }
+
+        .modal-image-gallery {
+            position: relative;
+        }
+
+        .modal-main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .modal-thumbnail-strip {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            overflow-x: auto;
+            background: var(--cream);
+        }
+
+        .modal-thumbnail {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+        }
+
+        .modal-thumbnail:hover,
+        .modal-thumbnail.active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .modal-project-info {
+            padding: 2rem;
+        }
+
+        .modal-project-title {
+            color: var(--primary-green);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .modal-project-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-detail-item {
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .modal-detail-label {
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-project-description {
+            color: var(--dark-text);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        /* Project placeholder for empty slots */
+        .project-placeholder {
+            background: var(--white);
+            border: 2px dashed var(--accent-green);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-placeholder::before {
+            content: '📸';
+            font-size: 3rem;
+            opacity: 0.3;
+            margin-bottom: 1rem;
+        }
+
+        .project-placeholder:hover {
+            border-color: var(--primary-green);
+            background: var(--cream);
+            transform: translateY(-3px);
+        }
+
+        .project-placeholder h4 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .gallery-preview {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .project-modal {
+                padding: 1rem;
+            }
+
+            .modal-content {
+                margin: 1rem 0;
+            }
+
+            .modal-main-image {
+                height: 250px;
+            }
+
+            .modal-project-title {
+                font-size: 1.5rem;
+            }
+
+            .modal-project-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Contact Form */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: var(--cream);
+            padding: 2.5rem;
+            border-radius: 20px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-detail {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-detail-icon {
+            font-size: 1.2rem;
+            color: var(--primary-green);
+            margin-top: 0.2rem;
+            min-width: 20px;
+        }
+
+        .contact-form {
+            background: var(--cream);
+            padding: 2.5rem;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(127, 176, 105, 0.2);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+            font-family: inherit;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 3px rgba(127, 176, 105, 0.1);
+        }
+
+        .form-group textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: var(--white);
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(45, 90, 39, 0.3);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 90, 39, 0.4);
+        }
+
+        .submit-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-green);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition-smooth);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background: var(--accent-green);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: var(--shadow-medium);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition-smooth);
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero {
+                padding: 6rem 0 4rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-info {
+                position: static;
+            }
+
+            .cert-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 4rem 0;
+            }
+        }
+
+        /* Intersection Observer classes for animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Loading animation */
+        .loading {
+            opacity: 0;
+            animation: fadeIn 0.3s ease-out 0.1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="loading">
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Green Homes</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#passive-house" class="nav-link">Why Passive House</a></li>
+                <li><a href="#gallery" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Building Today for Tomorrow</h1>
+                    <p class="subtitle">Connecticut's premier net-zero and energy efficient construction specialists</p>
+                    <a href="#contact" class="cta-button">Start Your Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Why Choose Green Homes?</h2>
+                    <p>We specialize in creating homes that use 80% less energy than traditional construction while providing superior comfort and air quality.</p>
+                </div>
+
+                <div class="features-grid-three">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🏠</div>
+                        <h3>Net-Zero Energy Homes</h3>
+                        <p>Our homes generate as much energy as they consume, resulting in minimal utility bills and maximum environmental benefit.</p>
+                        <div class="expandable">
+                            <button class="expand-trigger" onclick="toggleExpand(this)">Learn More</button>
+                            <div class="expand-content">
+                                <p>Net-zero homes combine exceptional insulation, airtight construction, high-performance windows, and renewable energy systems. The result is a home that produces as much energy as it uses over the course of a year, leading to dramatically reduced utility costs and carbon footprint.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🌱</div>
+                        <h3>Sustainable Materials</h3>
+                        <p>We use environmentally friendly materials and construction methods that minimize impact on the earth.</p>
+                        <div class="expandable">
+                            <button class="expand-trigger" onclick="toggleExpand(this)">Learn More</button>
+                            <div class="expand-content">
+                                <p>Our material selection prioritizes sustainability, durability, and health. We use locally sourced materials when possible, low-VOC finishes, sustainable wood products, and recycled content materials that reduce environmental impact while creating healthier indoor environments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Certified Excellence</h3>
+                        <p>Passive House and ENERGY STAR certified builders with over 35 years of combined experience.</p>
+                        <div class="expandable">
+                            <button class="expand-trigger" onclick="toggleExpand(this)">Learn More</button>
+                            <div class="expand-content">
+                                <p>Our certifications represent the highest standards in energy efficiency and building science. Passive House certification requires rigorous training and ongoing education, while ENERGY STAR certification ensures homes meet strict energy performance guidelines set by the EPA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications">
+            <div class="container">
+                <h2 class="fade-in">Our Certifications</h2>
+                <div class="cert-badges">
+                    <div class="cert-badge fade-in">
+                        <h3>Passive House Certified</h3>
+                        <p>The world's leading standard for energy efficient construction</p>
+                    </div>
+                    <div class="cert-badge fade-in">
+                        <h3>EPA ENERGY STAR</h3>
+                        <p>Certified partner for high-performance home construction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>About Green Homes</h2>
+                    <p>Founded in 2004, we are a full service general contracting company committed to high performance building practices.</p>
+                </div>
+
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div class="slide-in-left" style="margin-bottom: 3rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 1.5rem;">Our Story</h3>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">Green Homes was founded with a simple but powerful vision: to create beautiful, healthy homes that work in harmony with the environment. Since 2004, we have been at the forefront of the energy efficiency movement in Connecticut, helping homeowners reduce their environmental impact while enjoying superior comfort and dramatically lower utility costs.</p>
+                    </div>
+
+                    <div class="slide-in-left" style="margin-bottom: 3rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 1.5rem;">Leadership</h3>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">Led by Chris Goetsch, our team brings together decades of combined experience in sustainable construction practices. Chris's commitment to continuous learning and certification in the latest green building techniques ensures that every Green Homes project incorporates the most advanced energy efficiency strategies available.</p>
+                    </div>
+
+                    <div class="slide-in-left" style="margin-bottom: 3rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 1.5rem;">Our Mission</h3>
+                        <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">We are a team of carpenters and project managers committed to high performance building practices. Our goal is to build energy efficient homes using environmentally friendly materials and methods. At every stage of the building process, there are things we can do to lessen the impact on the earth while creating beautiful and healthy homes.</p>
+                    </div>
+
+                    <div class="slide-in-left">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 1.5rem;">Experience You Can Trust</h3>
+                        <p style="font-size: 1.1rem; line-height: 1.7;">With projects throughout Connecticut since 2004 and a team with decades of cumulative experience, we have the knowledge and expertise to handle any energy efficient construction project, from simple additions to complete net-zero new construction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Our Services</h2>
+                    <p>Comprehensive energy efficient construction services for new homes, additions, and renovations.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🏗️</div>
+                        <h3>New Construction</h3>
+                        <p>Custom net-zero and passive house new construction designed for maximum energy efficiency.</p>
+                        <div class="expandable">
+                            <button class="expand-trigger" onclick="toggleExpand(this)">Learn More</button>
+                            <div class="expand-content">
+                                <p>Our new construction projects start with optimal site orientation and progress through every detail of high-performance building. We work with architects who specialize in sustainable design and use advanced building science to create homes that exceed energy efficiency expectations while maintaining beautiful, comfortable living spaces.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Additions</h3>
+                        <p>Energy efficient additions that seamlessly integrate with your existing home.</p>
+                        <div class="expandable">
+                            <button class="expand-trigger" onclick="toggleExpand(this)">Learn More</button>
+                            <div class="expand-content">
+                                <p>When adding space to your home, we ensure the new construction meets the highest energy efficiency standards while complementing your existing structure. Our additions often improve the overall energy performance of the entire home through strategic insulation upgrades and air sealing improvements.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">♻️</div>
+                        <h3>Energy Efficient Renovations</h3>
+                        <p>Transform existing homes into high-performance, energy efficient living spaces.</p>
+                        <div class="expandable">
+                            <button class="expand-trigger" onclick="toggleExpand(this)">Learn More</button>
+                            <div class="expand-content">
+                                <p>Our renovation approach focuses on dramatically improving energy performance through comprehensive insulation upgrades, air sealing, high-performance windows, and efficient mechanical systems. We can often achieve 50-80% energy savings in existing homes while improving comfort and indoor air quality.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Architectural Collaboration</h3>
+                        <p>We work with local architects specializing in high performance and sustainable design.</p>
+                        <div class="expandable">
+                            <button class="expand-trigger" onclick="toggleExpand(this)">Learn More</button>
+                            <div class="expand-content">
+                                <p>Our network of architectural partners share our commitment to sustainable design. We collaborate closely during the design phase to ensure that aesthetic goals align with energy performance objectives, creating homes that are both beautiful and exceptionally efficient.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PASSIVE HOUSE SECTION -->
+        <section id="passive-house" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Why Passive House & Energy Efficiency?</h2>
+                    <p>Understanding what makes Green Homes the premier choice for energy efficient construction in Connecticut.</p>
+                </div>
+
+                <div style="max-width: 1000px; margin: 0 auto;">
+                    <div class="slide-in-left" style="margin-bottom: 4rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 2rem;">What is a Passive House?</h3>
+                        <p style="margin-bottom: 2.5rem; font-size: 1.2rem; line-height: 1.7;">Passive House is the world's most rigorous voluntary energy standard for buildings. A Passive House uses up to 90% less energy for heating and cooling compared to typical buildings, and up to 75% less energy than even most "green" buildings. This dramatic reduction is achieved through five key principles:</p>
+
+                        <div style="background: var(--white); padding: 3rem; border-radius: 15px; margin-bottom: 3rem; box-shadow: var(--shadow-light);">
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 2rem; padding-left: 2rem; position: relative; font-size: 1.1rem;">
+                                    <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold; font-size: 1.3rem;">1.</span>
+                                    <strong>Superior Insulation:</strong> Continuous insulation eliminates thermal bridges and heat loss
+                                </li>
+                                <li style="margin-bottom: 2rem; padding-left: 2rem; position: relative; font-size: 1.1rem;">
+                                    <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold; font-size: 1.3rem;">2.</span>
+                                    <strong>Airtight Construction:</strong> Prevents unwanted air leakage and maintains consistent temperatures
+                                </li>
+                                <li style="margin-bottom: 2rem; padding-left: 2rem; position: relative; font-size: 1.1rem;">
+                                    <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold; font-size: 1.3rem;">3.</span>
+                                    <strong>High-Performance Windows:</strong> Triple-glazed windows with insulated frames
+                                </li>
+                                <li style="margin-bottom: 2rem; padding-left: 2rem; position: relative; font-size: 1.1rem;">
+                                    <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold; font-size: 1.3rem;">4.</span>
+                                    <strong>Balanced Ventilation:</strong> Heat recovery ventilation provides fresh air efficiently
+                                </li>
+                                <li style="padding-left: 2rem; position: relative; font-size: 1.1rem;">
+                                    <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold; font-size: 1.3rem;">5.</span>
+                                    <strong>Thermal Bridge-Free Design:</strong> Eliminates weak points in the building envelope
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="slide-in-left" style="margin-bottom: 4rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 2rem;">Energy Efficiency in Construction</h3>
+                        <p style="margin-bottom: 2.5rem; font-size: 1.2rem; line-height: 1.7;">Energy efficiency in construction goes far beyond just installing efficient appliances. It requires a whole-building approach that considers how every component works together:</p>
+
+                        <div style="background: var(--cream); padding: 3rem; border-radius: 15px; margin-bottom: 3rem;">
+                            <p style="margin-bottom: 1.5rem; font-size: 1.1rem;"><strong>Building Envelope Performance:</strong> The foundation, walls, roof, windows, and doors must work as a unified system to control heat, air, and moisture movement.</p>
+                            <p style="margin-bottom: 1.5rem; font-size: 1.1rem;"><strong>Mechanical System Integration:</strong> Heating, cooling, and ventilation systems are right-sized for the efficient envelope, often requiring 80% less capacity than conventional systems.</p>
+                            <p style="margin-bottom: 1.5rem; font-size: 1.1rem;"><strong>Indoor Air Quality:</strong> Controlled ventilation ensures continuous fresh air while recovering heat energy, maintaining excellent air quality without energy penalties.</p>
+                            <p style="font-size: 1.1rem;"><strong>Durability and Comfort:</strong> Proper moisture management and thermal control create more durable structures and superior occupant comfort.</p>
+                        </div>
+                    </div>
+
+                    <div class="slide-in-left" style="margin-bottom: 4rem;">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 2rem;">What Makes Green Homes CT Different</h3>
+                        <p style="margin-bottom: 2.5rem; font-size: 1.2rem; line-height: 1.7;">While many contractors talk about "green building," Green Homes delivers measurable, certified performance that sets us apart as Connecticut's premier energy efficient construction company:</p>
+
+                        <div style="background: var(--white); padding: 3rem; border-radius: 15px; margin-bottom: 3rem; box-shadow: var(--shadow-light);">
+                            <h4 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 1.4rem;">Certified Expertise</h4>
+                            <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">Our <strong>Passive House certification</strong> represents completion of rigorous training in building science, energy modeling, and quality control. This certification requires ongoing education and adherence to the world's most demanding energy efficiency standards.</p>
+                            
+                            <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">As an <strong>EPA ENERGY STAR partner</strong>, we follow strict guidelines for energy efficient construction and use third-party verification to ensure every home meets performance targets.</p>
+
+                            <h4 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 1.4rem;">Proven Performance</h4>
+                            <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;">Our homes don't just meet energy efficiency goals on paper—they deliver real-world performance. Through careful attention to construction details, quality control, and post-construction testing, we ensure that your home performs as designed.</p>
+
+                            <h4 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 1.4rem;">Comprehensive Approach</h4>
+                            <p style="font-size: 1.1rem; line-height: 1.7;">From initial design consultation through final commissioning, we consider every aspect of building performance. This holistic approach ensures that energy efficiency, comfort, health, and durability all work together seamlessly.</p>
+                        </div>
+                    </div>
+
+                    <div class="slide-in-left">
+                        <h3 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 2rem;">Our Values</h3>
+                        <div style="background: var(--cream); padding: 3rem; border-radius: 15px;">
+                            <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;"><strong>Environmental Stewardship:</strong> We believe that every building decision is an opportunity to reduce environmental impact while creating healthier living spaces.</p>
+                            <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;"><strong>Quality and Craftsmanship:</strong> High-performance building requires exceptional attention to detail. We take pride in delivering construction quality that exceeds industry standards.</p>
+                            <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7;"><strong>Client Education:</strong> We believe informed clients make better decisions. We take time to explain our processes and help you understand the long-term benefits of energy efficient construction.</p>
+                            <p style="font-size: 1.1rem; line-height: 1.7;"><strong>Continuous Improvement:</strong> Building science continues to evolve, and we stay current with the latest techniques, materials, and technologies to deliver the best possible results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Project Gallery</h2>
+                    <p>Showcase of our energy efficient construction projects throughout Connecticut.</p>
+                </div>
+
+                <div class="gallery-preview">
+                    <!-- Example of how a completed project would look -->
+                    <div class="project-card" onclick="openProjectModal('project1')">
+                        <div class="project-image">
+                            <!-- When you add images, replace this with: <img src="images/project1-main.jpg" alt="Project 1 main image"> -->
+                        </div>
+                        <div class="click-hint">Click to view details</div>
+                        <div class="project-content">
+                            <h4 class="project-title">Project 1 - [Your Project Name]</h4>
+                            <p class="project-blurb">Brief description of the project will go here. Highlight key energy efficiency features.</p>
+                            <span class="project-type">New Construction</span>
+                        </div>
+                    </div>
+
+                    <!-- Remaining placeholders for projects 2-10 -->
+                    <div class="project-placeholder">
+                        <h4>Project 2</h4>
+                        <p>Ready for your project photo and description</p>
+                    </div>
+                    <div class="project-card" onclick="openProjectModal('project3')">
+    <div class="project-image">
+        <img src="images/project3-main.jpeg" alt="The Tea House main image">
+    </div>
+    <div class="click-hint">Click to view details</div>
+    <div class="project-content">
+        <h4 class="project-title">The Tea House</h4>
+        <p class="project-blurb">An elegant Tea House designed to create a meditative landscape experience.</p>
+        <span class="project-type">New Construction</span>
+    </div>
+</div>
+                    <div class="project-placeholder">
+                        <h4>Project 4</h4>
+                        <p>Ready for your project photo and description</p>
+                    </div>
+                    <div class="project-placeholder">
+                        <h4>Project 5</h4>
+                        <p>Ready for your project photo and description</p>
+                    </div>
+                    <div class="project-placeholder">
+                        <h4>Project 6</h4>
+                        <p>Ready for your project photo and description</p>
+                    </div>
+                    <div class="project-placeholder">
+                        <h4>Project 7</h4>
+                        <p>Ready for your project photo and description</p>
+                    </div>
+                    <div class="project-placeholder">
+                        <h4>Project 8</h4>
+                        <p>Ready for your project photo and description</p>
+                    </div>
+                    <div class="project-placeholder">
+                        <h4>Project 9</h4>
+                        <p>Ready for your project photo and description</p>
+                    </div>
+                    <div class="project-placeholder">
+                        <h4>Project 10</h4>
+                        <p>Ready for your project photo and description</p>
+                    </div>
+                </div>
+
+                <!-- Project Modal -->
+                <div class="project-modal" id="projectModal">
+                    <div class="modal-content">
+                        <button class="modal-close" onclick="closeProjectModal()">×</button>
+                        
+                        <div class="modal-image-gallery">
+                            <img class="modal-main-image" id="modalMainImage" src="" alt="Project main image">
+                            <div class="modal-thumbnail-strip" id="modalThumbnails">
+                                <!-- Thumbnails will be added here dynamically -->
+                            </div>
+                        </div>
+                        
+                        <div class="modal-project-info">
+                            <h3 class="modal-project-title" id="modalTitle">Project Title</h3>
+                            
+                            <div class="modal-project-details" id="modalDetails">
+                                <!-- Project details will be added here -->
+                            </div>
+                            
+                            <div class="modal-project-description" id="modalDescription">
+                                <!-- Detailed project description will be added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: var(--white); border-radius: 20px; box-shadow: var(--shadow-light);" class="fade-in">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 1.5rem;">Ready to Add Your Projects</h3>
+                    <p style="color: var(--light-text); font-size: 1.1rem; line-height: 1.7;">To add photos and descriptions to these project placeholders, simply replace the placeholder content with your actual project information. Each project can include multiple photos, detailed descriptions, and specific energy performance data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Contact Green Homes</h2>
+                    <p>Ready to start your energy efficient construction project? Get in touch today.</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info slide-in-left">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-detail">
+                            <span class="contact-detail-icon">📞</span>
+                            <div>
+                                <strong>Phone</strong><br>
+                                <a href="tel:203-889-7875" style="color: var(--dark-text); text-decoration: none;">203-889-7875</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-detail-icon">✉️</span>
+                            <div>
+                                <strong>Email</strong><br>
+                                <a href="mailto:info@greenhomesct.com" style="color: var(--dark-text); text-decoration: none;">info@greenhomesct.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-detail-icon">📍</span>
+                            <div>
+                                <strong>Address</strong><br>
+                                61 Broad St. Ext.<br>
+                                Guilford, CT 06437
+                            </div>
+                        </div>
+                        <div style="margin-top: 2.5rem; padding: 2rem; background: var(--white); border-radius: 15px; box-shadow: var(--shadow-light);">
+                            <h4 style="color: var(--primary-green); margin-bottom: 1.5rem; font-size: 1.2rem;">Why Choose Green Homes?</h4>
+                            <ul style="list-style: none; padding: 0; color: var(--light-text);">
+                                <li style="margin-bottom: 0.8rem; font-size: 1.05rem;">✓ Passive House Certified Builders</li>
+                                <li style="margin-bottom: 0.8rem; font-size: 1.05rem;">✓ EPA ENERGY STAR Partners</li>
+                                <li style="margin-bottom: 0.8rem; font-size: 1.05rem;">✓ 35+ Years Combined Experience</li>
+                                <li style="margin-bottom: 0.8rem; font-size: 1.05rem;">✓ Net-Zero Energy Specialists</li>
+                                <li style="font-size: 1.05rem;">✓ Serving Connecticut Since 2004</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contact-form fade-in">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm" method="POST">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="projectType">Project Type *</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="">Select a project type</option>
+                                    <option value="new-construction">New Construction</option>
+                                    <option value="addition">Addition</option>
+                                    <option value="renovation">Energy Efficient Renovation</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">Project Location</label>
+                                <input type="text" id="location" name="location" placeholder="City, State">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeline">Desired Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="immediate">Immediate (within 1 month)</option>
+                                    <option value="short-term">Short-term (1-3 months)</option>
+                                    <option value="medium-term">Medium-term (3-6 months)</option>
+                                    <option value="long-term">Long-term (6+ months)</option>
+                                    <option value="planning">Planning phase</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Project Details</label>
+                                <textarea id="message" name="message" placeholder="Please describe your project, goals, and any specific energy efficiency requirements..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" style="position: relative; z-index: 1;">
+            <p>&copy; 2025 Green Homes. Building today for tomorrow. | Passive House Certified | EPA ENERGY STAR Partner</p>
+            <p style="margin-top: 0.8rem; font-size: 0.95rem; opacity: 0.9;">Serving Connecticut with energy efficient construction since 2004</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+    <script>
+        // Performance optimization - defer non-critical JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeWebsite();
+        });
+
+        function initializeWebsite() {
+            // Initialize all functionality
+            setupNavigation();
+            setupScrollEffects();
+            setupIntersectionObserver();
+            setupContactForm();
+            setupMobileMenu();
+            
+            // Remove loading class
+            document.body.classList.remove('loading');
+        }
+
+        // Navigation functionality
+        function setupNavigation() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            
+            // Smooth scrolling for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Close mobile menu if open
+                        const navLinksContainer = document.getElementById('navLinks');
+                        navLinksContainer.classList.remove('active');
+                    }
+                });
+            });
+
+            // Update active navigation link based on scroll position
+            function updateActiveNavLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Throttled scroll event for better performance
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        updateActiveNavLink();
+                        updateScrollEffects();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+
+        // Scroll effects
+        function setupScrollEffects() {
+            const navbar = document.getElementById('navbar');
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        function updateScrollEffects() {
+            const navbar = document.getElementById('navbar');
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            // Update navbar appearance
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Show/hide scroll to top button
+            if (window.scrollY > 500) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        }
+
+        // Intersection Observer for animations
+        function setupIntersectionObserver() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all elements with animation classes
+            document.querySelectorAll('.fade-in, .slide-in-left').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Expandable content functionality
+        function toggleExpand(button) {
+            const content = button.nextElementSibling;
+            const isActive = content.classList.contains('active');
+            
+            if (isActive) {
+                content.classList.remove('active');
+                button.textContent = 'Learn More';
+            } else {
+                content.classList.add('active');
+                button.textContent = 'Show Less';
+            }
+        }
+
+        // Mobile menu functionality
+        function setupMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenu');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                
+                // Update button text
+                if (navLinks.classList.contains('active')) {
+                    this.innerHTML = '✕';
+                } else {
+                    this.innerHTML = '☰';
+                }
+            });
+            
+            // Close mobile menu when clicking on links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '☰';
+                });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('nav')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '☰';
+                }
+            });
+        }
+
+        // Contact form functionality - Vercel optimized
+        function setupContactForm() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Validation
+                    if (!data.firstName || !data.lastName || !data.email || !data.projectType) {
+                        showNotification('Please fill in all required fields.', 'error');
+                        return;
+                    }
+                    
+                    if (!isValidEmail(data.email)) {
+                        showNotification('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    // Button state management
+                    const button = document.querySelector('.submit-button');
+                    const originalText = button.textContent;
+                    button.textContent = 'Sending...';
+                    button.disabled = true;
+                    
+                    try {
+                        const response = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (response.ok) {
+                            showNotification(result.message || 'Thank you for your message! We will get back to you soon.', 'success');
+                            this.reset();
+                        } else {
+                            showNotification('Error: ' + (result.message || 'Failed to send message'), 'error');
+                        }
+                    } catch (error) {
+                        showNotification('Network error. Please try again or call us directly.', 'error');
+                        console.error('Form submission error:', error);
+                    }
+                    
+                    // Restore button
+                    button.textContent = originalText;
+                    button.disabled = false;
+                });
+            }
+        }
+
+        // Utility functions
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function showNotification(message, type) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${type === 'success' ? 'var(--accent-green)' : '#e74c3c'};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 10px;
+                box-shadow: var(--shadow-medium);
+                z-index: 10000;
+                transform: translateX(400px);
+                transition: transform 0.3s ease-out;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 5000);
+        }
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function() {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const targetSection = document.getElementById(hash);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+
+        // Performance: Preload critical resources
+        function preloadCriticalResources() {
+            // Add any critical resource preloading here
+            const criticalImages = document.querySelectorAll('img[data-src]');
+            criticalImages.forEach(img => {
+                const src = img.dataset.src;
+                if (src) {
+                    img.src = src;
+                    img.removeAttribute('data-src');
+                }
+            });
+        }
+
+        // Initialize preloading
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', preloadCriticalResources);
+        } else {
+            preloadCriticalResources();
+        }
+
+        // Service Worker registration for PWA capabilities (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // Uncomment the following lines if you create a service worker
+                // navigator.serviceWorker.register('/sw.js')
+                //   .then(function(registration) {
+                //     console.log('SW registered: ', registration);
+                //   })
+                //   .catch(function(registrationError) {
+                //     console.log('SW registration failed: ', registrationError);
+                //   });
+            });
+        }
+
+        // Project modal functionality
+        function openProjectModal(projectId) {
+            const modal = document.getElementById('projectModal');
+            
+            // This is where you'll add your actual project data
+            const projectData = getProjectData(projectId);
+            
+            if (projectData) {
+                populateModal(projectData);
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        function getProjectData(projectId) {
+            // Example project data structure - you'll replace this with your actual projects
+            const projects = {
+                'project1': {
+                    title: 'Net-Zero Home in Guilford',
+                    images: [
+                        'images/project1-main.jpg',
+                        'images/project1-interior.jpg',
+                        'images/project1-exterior.jpg'
+                        // Add more image paths as needed
+                    ],
+                    details: {
+                        'Project Type': 'New Construction',
+                        'Location': 'Guilford, CT',
+                        'Year Completed': '2024',
+                        'Square Footage': '2,400 sq ft',
+                        'Energy Rating': 'Net-Zero',
+                        'Certification': 'Passive House'
+                    },
+                    description: `This stunning net-zero home represents the future of residential construction. 
+                    Built to Passive House standards, this 2,400 square foot home uses 90% less energy than 
+                    conventional construction. Features include triple-glazed windows, continuous insulation, 
+                    heat recovery ventilation, and a solar array that produces more energy than the home consumes 
+                    annually. The owners enjoy exceptional comfort year-round with minimal utility costs.`
+                },
+                'project3': {
+    title: 'The Tea House',
+    images: [
+        'images/project3-main.jpeg',
+        'images/project3-photo2.jpeg',
+        'images/project3-photo3.jpeg',
+        'images/project3-photo4.jpeg'
+    ],
+    details: {
+        'Project Type': 'New Construction',
+        'Location': 'Stony Creek, Branford, CT',
+        'Recognition': 'Featured on the cover of Connecticut Cottages & Gardens'
+    },
+    description: `An elegant Tea House designed to create a meditative landscape experience. This thoughtfully crafted structure blends traditional aesthetics with modern construction techniques to provide a serene retreat space. Featured on the cover of Connecticut Cottages & Gardens, this project exemplifies our commitment to creating beautiful, purpose-driven spaces.`
+}
+                // Add more projects here following the same structure
+            };
+            
+            return projects[projectId] || null;
+        }
+
+        function populateModal(projectData) {
+            // Update title
+            document.getElementById('modalTitle').textContent = projectData.title;
+            
+            // Update main image
+            const mainImage = document.getElementById('modalMainImage');
+            if (projectData.images && projectData.images.length > 0) {
+                mainImage.src = projectData.images[0];
+                mainImage.alt = projectData.title;
+            }
+            
+            // Update thumbnails
+            const thumbnailContainer = document.getElementById('modalThumbnails');
+            thumbnailContainer.innerHTML = '';
+            
+            if (projectData.images && projectData.images.length > 1) {
+                projectData.images.forEach((imageSrc, index) => {
+                    const thumbnail = document.createElement('img');
+                    thumbnail.src = imageSrc;
+                    thumbnail.className = 'modal-thumbnail';
+                    thumbnail.onclick = () => switchMainImage(imageSrc);
+                    if (index === 0) thumbnail.classList.add('active');
+                    thumbnailContainer.appendChild(thumbnail);
+                });
+            }
+            
+            // Update project details
+            const detailsContainer = document.getElementById('modalDetails');
+            detailsContainer.innerHTML = '';
+            
+            Object.entries(projectData.details).forEach(([label, value]) => {
+                const detailItem = document.createElement('div');
+                detailItem.className = 'modal-detail-item';
+                detailItem.innerHTML = `
+                    <div class="modal-detail-label">${label}</div>
+                    <div>${value}</div>
+                `;
+                detailsContainer.appendChild(detailItem);
+            });
+            
+            // Update description
+            document.getElementById('modalDescription').textContent = projectData.description;
+        }
+
+        function switchMainImage(imageSrc) {
+            document.getElementById('modalMainImage').src = imageSrc;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.modal-thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+                if (thumb.src.includes(imageSrc)) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+
+        // Close modal when clicking outside content
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('project-modal')) {
+                closeProjectModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProjectModal();
+            }
+        });
+    </script>
+
+    <!-- Google Analytics (replace GA_MEASUREMENT_ID with your actual ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</body>
+</html>
