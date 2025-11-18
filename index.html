@@ -1310,10 +1310,17 @@
         <span class="project-type">New Construction</span>
     </div>
 </div>
-                    <div class="project-placeholder">
-                        <h4>Project 4</h4>
-                        <p>Ready for your project photo and description</p>
-                    </div>
+                    <div class="project-card" onclick="openProjectModal('project4')">
+    <div class="project-image">
+        <img src="images/project4-main.jpeg" alt="Bethany Mountain renovation main image">
+    </div>
+    <div class="click-hint">Click to view details</div>
+    <div class="project-content">
+        <h4 class="project-title">Bethany Mountain</h4>
+        <p class="project-blurb">An expansive renovation seamlessly blending contemporary design with the natural beauty of its mountainside setting.</p>
+        <span class="project-type">Renovation</span>
+    </div>
+</div>
                     <div class="project-placeholder">
                         <h4>Project 5</h4>
                         <p>Ready for your project photo and description</p>
@@ -1886,7 +1893,23 @@
         'Recognition': 'Featured on the cover of Connecticut Cottages & Gardens'
     },
     description: `An elegant Tea House designed to create a meditative landscape experience. This thoughtfully crafted structure blends traditional aesthetics with modern construction techniques to provide a serene retreat space. Featured on the cover of Connecticut Cottages & Gardens, this project exemplifies our commitment to creating beautiful, purpose-driven spaces.`
-}
+},
+'project4': {
+        title: 'Bethany Mountain',
+        images: [
+            'images/project4-main.jpeg',
+            'images/project4-2.jpeg',
+            'images/project4-3.jpeg',
+            'images/project4-4.jpeg',
+            'images/project4-5.jpeg'
+        ],
+        details: {
+            'Project Type': 'Renovation',
+            'Location': 'Cheshire, CT'
+        },
+        description: `The Bethany Mountain project showcases a comprehensive renovation that respects the home's stunning natural surroundings while introducing modern living elements. Situated in Cheshire's scenic landscape, this renovation focuses on maximizing views, creating open and inviting spaces, and incorporating high-quality finishes throughout. The project demonstrates our expertise in transforming existing homes into exceptional living environments that honor both architecture and nature.`
+    }
+
                 // Add more projects here following the same structure
             };
             
