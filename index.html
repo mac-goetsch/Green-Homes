@@ -1321,10 +1321,17 @@
         <span class="project-type">Renovation</span>
     </div>
 </div>
-                    <div class="project-placeholder">
-                        <h4>Project 5</h4>
-                        <p>Ready for your project photo and description</p>
-                    </div>
+                    <div class="project-card" onclick="openProjectModal('project5')">
+    <div class="project-image">
+        <img src="images/project5-main.jpeg" alt="Quarry Road renovation main image">
+    </div>
+    <div class="click-hint">Click to view details</div>
+    <div class="project-content">
+        <h4 class="project-title">Quarry Road</h4>
+        <p class="project-blurb">A coastal renovation harmonizing classic New England charm with modern functionality in the heart of Stony Creek.</p>
+        <span class="project-type">Renovation</span>
+    </div>
+</div>
                     <div class="project-placeholder">
                         <h4>Project 6</h4>
                         <p>Ready for your project photo and description</p>
@@ -1908,6 +1915,21 @@
             'Location': 'Cheshire, CT'
         },
         description: `The Bethany Mountain project showcases a comprehensive renovation that respects the home's stunning natural surroundings while introducing modern living elements. Situated in Cheshire's scenic landscape, this renovation focuses on maximizing views, creating open and inviting spaces, and incorporating high-quality finishes throughout. The project demonstrates our expertise in transforming existing homes into exceptional living environments that honor both architecture and nature.`
+    },
+    'project5': {
+        title: 'Quarry Road',
+        images: [
+            'images/project5-main.jpeg',
+            'images/project5-2.jpeg',
+            'images/project5-3.jpeg',
+            'images/project5-4.jpeg',
+            'images/project5-5.jpeg'
+        ],
+        details: {
+            'Project Type': 'Renovation',
+            'Location': 'Stony Creek, Branford, CT'
+        },
+        description: `The Quarry Road renovation captures the essence of coastal Connecticut living while incorporating contemporary design elements. Located in the charming village of Stony Creek, this project focuses on creating bright, airy spaces that embrace the area's maritime heritage. Through careful planning and skilled execution, we've transformed this home into a perfect blend of traditional character and modern comfort, ideal for coastal living.`
     }
 
                 // Add more projects here following the same structure
