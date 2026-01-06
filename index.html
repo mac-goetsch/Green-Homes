@@ -1276,16 +1276,16 @@
                 <div class="gallery-preview">
                     <!-- Example of how a completed project would look -->
                     <div class="project-card" onclick="openProjectModal('project1')">
-                        <div class="project-image">
-                            <!-- When you add images, replace this with: <img src="images/project1-main.jpg" alt="Project 1 main image"> -->
-                        </div>
-                        <div class="click-hint">Click to view details</div>
-                        <div class="project-content">
-                            <h4 class="project-title">Project 1 - [Your Project Name]</h4>
-                            <p class="project-blurb">Brief description of the project will go here. Highlight key energy efficiency features.</p>
-                            <span class="project-type">New Construction</span>
-                        </div>
-                    </div>
+    <div class="project-image">
+        <img src="images/project1-main.jpeg" alt="Durham Road renovation main image">
+    </div>
+    <div class="click-hint">Click to view details</div>
+    <div class="project-content">
+        <h4 class="project-title">Durham Road</h4>
+        <p class="project-blurb">A sophisticated renovation bringing timeless elegance to a Guilford residence through refined craftsmanship and thoughtful design.</p>
+        <span class="project-type">Renovation</span>
+    </div>
+</div>
 
                     <!-- Remaining placeholders for projects 2-10 -->
                     <div class="project-card" onclick="openProjectModal('project2')">
@@ -1849,28 +1849,20 @@
         function getProjectData(projectId) {
             // Example project data structure - you'll replace this with your actual projects
             const projects = {
-                'project1': {
-                    title: 'Net-Zero Home in Guilford',
-                    images: [
-                        'images/project1-main.jpg',
-                        'images/project1-interior.jpg',
-                        'images/project1-exterior.jpg'
-                        // Add more image paths as needed
-                    ],
-                    details: {
-                        'Project Type': 'New Construction',
-                        'Location': 'Guilford, CT',
-                        'Year Completed': '2024',
-                        'Square Footage': '2,400 sq ft',
-                        'Energy Rating': 'Net-Zero',
-                        'Certification': 'Passive House'
-                    },
-                    description: `This stunning net-zero home represents the future of residential construction. 
-                    Built to Passive House standards, this 2,400 square foot home uses 90% less energy than 
-                    conventional construction. Features include triple-glazed windows, continuous insulation, 
-                    heat recovery ventilation, and a solar array that produces more energy than the home consumes 
-                    annually. The owners enjoy exceptional comfort year-round with minimal utility costs.`
-                },
+    'project1': {
+        title: 'Durham Road',
+        images: [
+            'images/project1-main.jpeg',
+            'images/project1-2.jpeg',
+            'images/project1-3.jpeg',
+            'images/project1-4.jpeg'
+        ],
+        details: {
+            'Project Type': 'Renovation',
+            'Location': 'Guilford, CT'
+        },
+        description: `The Durham Road project exemplifies our commitment to quality renovation work in Guilford's established neighborhoods. This comprehensive renovation focuses on updating interior spaces while maintaining the home's architectural integrity. Through careful material selection and expert craftsmanship, we've created inviting living areas that blend seamlessly with the home's original character, resulting in a refined and comfortable residence.`
+    },
                 'project2': {
         title: 'Dogwood',
         images: [
