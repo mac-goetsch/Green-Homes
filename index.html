@@ -21,8 +21,8 @@
     <meta name="twitter:description" content="Connecticut's premier construction company specializing in net-zero and energy efficient homes.">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
-    
+<link rel="icon" type="image/png" href="images/favicon.png">
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,12 +129,22 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-green);
-            text-decoration: none;
-            transition: var(--transition-smooth);
-        }
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    transition: var(--transition-smooth);
+}
+
+.logo:hover img {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
 
         .logo:hover {
             color: var(--accent-green);
@@ -1033,7 +1043,9 @@
 <body class="loading">
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">Green Homes</a>
+            <a href="#home" class="logo">
+    <img src="images/green-homes-logo.png" alt="Green Homes" style="height: 50px; width: auto;">
+</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -1504,11 +1516,12 @@
     </main>
 
     <footer>
-        <div class="container" style="position: relative; z-index: 1;">
-            <p>&copy; 2025 Green Homes. Building today for tomorrow. | Passive House Certified | EPA ENERGY STAR Partner</p>
-            <p style="margin-top: 0.8rem; font-size: 0.95rem; opacity: 0.9;">Serving Connecticut with energy efficient construction since 2004</p>
-        </div>
-    </footer>
+    <div class="container" style="position: relative; z-index: 1;">
+        <img src="images/green-homes-logo.png" alt="Green Homes" style="height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+        <p>&copy; 2025 Green Homes. Building today for tomorrow. | Passive House Certified | EPA ENERGY STAR Partner</p>
+        <p style="margin-top: 0.8rem; font-size: 0.95rem; opacity: 0.9;">Serving Connecticut with energy efficient construction since 2004</p>
+    </div>
+</footer>
 
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
 
