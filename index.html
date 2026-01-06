@@ -1689,60 +1689,71 @@
             });
         }
 
-        // Contact form functionality - Vercel optimized
-        function setupContactForm() {
-            const contactForm = document.getElementById('contactForm');
+// Contact form functionality - EmailJS integration
+function setupContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            if (contactForm) {
-                contactForm.addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    
-                    const formData = new FormData(this);
-                    const data = Object.fromEntries(formData);
-                    
-                    // Validation
-                    if (!data.firstName || !data.lastName || !data.email || !data.projectType) {
-                        showNotification('Please fill in all required fields.', 'error');
-                        return;
-                    }
-                    
-                    if (!isValidEmail(data.email)) {
-                        showNotification('Please enter a valid email address.', 'error');
-                        return;
-                    }
-                    
-                    // Button state management
-                    const button = document.querySelector('.submit-button');
-                    const originalText = button.textContent;
-                    button.textContent = 'Sending...';
-                    button.disabled = true;
-                    
-                    try {
-                        const response = await fetch('/api/contact', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(data)
-                        });
-                        
-                        const result = await response.json();
-                        
-                        if (response.ok) {
-                            showNotification(result.message || 'Thank you for your message! We will get back to you soon.', 'success');
-                            this.reset();
-                        } else {
-                            showNotification('Error: ' + (result.message || 'Failed to send message'), 'error');
-                        }
-                    } catch (error) {
-                        showNotification('Network error. Please try again or call us directly.', 'error');
-                        console.error('Form submission error:', error);
-                    }
-                    
-                    // Restore button
-                    button.textContent = originalText;
-                    button.disabled = false;
-                });
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Validation
+            if (!data.firstName || !data.lastName || !data.email || !data.projectType) {
+                showNotification('Please fill in all required fields.', 'error');
+                return;
             }
-        }
+            
+            if (!isValidEmail(data.email)) {
+                showNotification('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            // Button state management
+            const button = document.querySelector('.submit-button');
+            const originalText = button.textContent;
+            button.textContent = 'Sending...';
+            button.disabled = true;
+            
+            // Prepare template parameters for EmailJS
+            const templateParams = {
+                from_name: `${data.firstName} ${data.lastName}`,
+                from_email: data.email,
+                phone: data.phone || 'Not provided',
+                project_type: data.projectType,
+                location: data.location || 'Not provided',
+                timeline: data.timeline || 'Not provided',
+                message: data.message || 'No additional details provided'
+            };
+            
+            try {
+                // Send email using EmailJS
+                const response = await emailjs.send(
+                    'service_7ipt2lp',  // Your Service ID
+                    'template_w7c9k79',  // Your Template ID
+                    templateParams,
+                    'se5cE8vyekhaeN3Ka'  // Your Public Key
+                );
+                
+                if (response.status === 200) {
+                    showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
+                    this.reset();
+                } else {
+                    showNotification('Something went wrong. Please try again or call us directly.', 'error');
+                }
+            } catch (error) {
+                console.error('EmailJS error:', error);
+                showNotification('Network error. Please try again or contact us at 203-889-7875.', 'error');
+            }
+            
+            // Restore button
+            button.textContent = originalText;
+            button.disabled = false;
+        });
+    }
+}
 
         // Utility functions
         function isValidEmail(email) {
@@ -2014,6 +2025,13 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'GA_MEASUREMENT_ID');
+
+<!-- EmailJS SDK -->
+    </script>script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init('se5cE8vyekhaeN3Ka');
+        })();
     </script>
 </body>
 </html>
