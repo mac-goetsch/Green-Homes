@@ -1375,7 +1375,17 @@
         <span class="project-type">Renovation</span>
     </div>
 </div>
-                    
+                    <div class="project-card" onclick="openProjectModal('project6')">
+    <div class="project-image">
+        <img src="images/project6-main.jpeg" alt="Howard Drive renovation main image">
+    </div>
+    <div class="click-hint">Click to view details</div>
+    <div class="project-content">
+        <h4 class="project-title">Howard Drive</h4>
+        <p class="project-blurb">A complete full-scale renovation showcasing meticulous attention to detail and superior craftsmanship throughout.</p>
+        <span class="project-type">Renovation</span>
+    </div>
+</div>
 
                 <!-- Project Modal -->
                 <div class="project-modal" id="projectModal">
@@ -1953,13 +1963,26 @@ function setupContactForm() {
             'Location': 'Stony Creek, Branford, CT'
         },
         description: `The Quarry Road renovation captures the essence of coastal Connecticut living while incorporating contemporary design elements. Located in the charming village of Stony Creek, this project focuses on creating bright, airy spaces that embrace the area's maritime heritage. Through careful planning and skilled execution, we've transformed this home into a perfect blend of traditional character and modern comfort, ideal for coastal living.`
+    },
+    'project6': {
+        title: 'Howard Drive',
+        images: [
+            'images/project6-main.jpeg',
+            'images/project6-2.jpeg',
+            'images/project6-3.jpeg',
+            'images/project6-4.jpeg'
+        ],
+        details: {
+            'Project Type': 'Renovation',
+            'Location': 'Guilford, CT'
+        },
+        description: `The Howard Drive project represents a comprehensive full renovation that exemplifies our dedication to exceptional craftsmanship and precision. Every aspect of this Guilford home was carefully reimagined and executed with meticulous attention to detail. From structural enhancements to refined finishing touches, this renovation showcases our team's expertise in delivering superior quality work that stands the test of time.`
     }
-
-                // Add more projects here following the same structure
+};
             };
             
             return projects[projectId] || null;
-        }
+        
 
         function populateModal(projectData) {
             // Update title
